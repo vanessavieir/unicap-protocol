@@ -42,3 +42,43 @@ export const Logo = styled.img`
     width: 198px;
     height: 76px;
 `;
+
+
+export const Cancel = styled.p`
+    font-size: 16px;
+    color: ${theme.gray};
+    text-decoration: underline;
+    :hover {
+        cursor: pointer;
+    }
+`;
+
+export const Touch = styled.div`
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+`;
+
+export const Container = styled.div`
+    width: 100%;
+    height: 100vh;
+    display: flex;
+`;
+
+export const Content = styled.div`
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-color: #FFFFFF;
+    align-items: center;
+`;
+
+export const BackButtonArea = styled.div`
+    width: 95%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: ${props => props.justify};
+    margin-top: 41px;
+`;

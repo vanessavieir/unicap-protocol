@@ -1,12 +1,12 @@
 'use client'
 import React from 'react'
 import styled from 'styled-components'
-import { theme } from '@/theme'
+import { theme } from '../theme'
 
-const Button = ({title, press}) => {
+const Button = ({ title, press }) => {
   return (
     <Container onClick={press}>
-        <ButtonTitle>{title}</ButtonTitle>
+      <ButtonTitle>{title}</ButtonTitle>
     </Container>
   )
 }
@@ -22,9 +22,7 @@ const Container = styled.button`
     margin: 24px 0;
     background-color: ${theme.background};
     border: 0;
-    :hover {
-      cursor: pointer;
-    }
+    cursor: pointer;
 `;
 
 const ButtonTitle = styled.p`

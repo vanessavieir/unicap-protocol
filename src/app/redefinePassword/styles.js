@@ -1,7 +1,3 @@
-'use client'
-
-import { theme } from "../../theme";
-
 const { default: styled } = require("styled-components");
 
 export const TitleArea = styled.div`
@@ -9,5 +5,11 @@ export const TitleArea = styled.div`
     display: flex;
     flex-direction: column;
     gap: ${props => props.gap};
-    margin-bottom: 60px;
+`;
+
+export const InputGroup = styled.div`
+    gap: 23px;
+    display: flex;
+    flex-direction: column;
+    margin-top: 37px;
 `;

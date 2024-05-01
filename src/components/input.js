@@ -2,7 +2,7 @@
 import React from 'react'
 'use Client'
 import styled from 'styled-components'
-import { theme } from '@/theme'
+import { theme } from '../theme'
 
 const Input = ({ holder, icon }) => {
   return (

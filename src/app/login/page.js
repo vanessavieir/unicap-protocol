@@ -1,19 +1,21 @@
 'use client'
 import React from 'react'
-import { ContainerLogin, LoginBox, BoxTitle, BoxText, LogoArea, Logo } from '@/globalStyles'
+import { ContainerLogin, LoginBox, BoxTitle, BoxText, LogoArea, Logo } from '../../globalStyles'
 import {
   InputGroup,
   ForgotPassword,
   TitleArea
 } from './styles'
-import Input from '@/components/input'
-import Button from '@/components/button'
+import Input from '../../components/input'
+import Button from '../../components/button'
 import Link from 'next/link'
 import { GoPerson } from "react-icons/go";
 import { GoLock } from "react-icons/go";
-import { useRouter } from 'next/router'
+import { useRouter } from 'next/navigation'
 
 const Login = () => {
+
+  const route = useRouter()
 
   return (
     <ContainerLogin>
@@ -33,7 +35,7 @@ const Login = () => {
           <Input holder={'****************'} icon={<GoLock color='#000000' size={25} />} />
         </InputGroup>
 
-        <Button title={'Entrar'} press={() => {}} />
+        <Button title={'Entrar'} press={() => route.push('myProfile')} />
 
         <Link href={'/recoverPassword'}>
           <ForgotPassword>Esqueceu a senha?</ForgotPassword>

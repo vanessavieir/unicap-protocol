@@ -1,12 +1,12 @@
 'use client'
 import React, { useState } from 'react'
 import Link from 'next/link'
-import { ContainerLogin, LoginBox, LogoArea, Logo, BoxTitle, BoxText } from '@/globalStyles'
-import { TitleArea, Content, Cancel } from './styles'
-import Input from '@/components/input'
-import Menssager from '@/components/menssager'
+import { ContainerLogin, LoginBox, LogoArea, Logo, BoxTitle, BoxText, Cancel } from '../../globalStyles'
+import { TitleArea, Content } from './styles'
+import Input from '../../components/input'
+import Menssager from '../../components/menssager'
 import { GoMail } from 'react-icons/go'
-import Button from '@/components/button'
+import Button from '../../components/button'
 
 const RecoverPassword = () => {
 
