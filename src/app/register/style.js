@@ -4,6 +4,7 @@ const { default: styled } = require("styled-components");
 
 export const Area = styled.div`
     width: 90%;
+    height: 100%;
 `;
 
 export const AreaTitle = styled.p`
