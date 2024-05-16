@@ -3,106 +3,88 @@ import Image from "next/image";
 import styles from "./page.module.css";
 import { useEffect, useState } from "react";
 import { useRouter } from 'next/navigation'
+import { Container } from "../globalStyles";
+import { Content, HeadlineArea, Logo, LogoArea, Title, VideoArea, ButtonArea, Button, ButtonTitle } from './styles'
+import { GoPencil, GoPerson } from "react-icons/go";
+import { AiOutlineFileSearch } from "react-icons/ai";
 
 export default function Home() {
 
   const router = useRouter()
-  const [isLoged, setIsLoged] = useState(false)
+  const [isLoged, setIsLoged] = useState(true)
+  const [user, setUser] = useState('user3')
 
   useEffect(() => {
-    
-    router.push('/login')
+
+    if (!isLoged) {
+      router.push('/login')
+    }
 
   }, [])
 
   return (
-    <main className={styles.main}>
-      <div className={styles.description}>
-        <p>
-          Get started by editing&nbsp;
-          <code className={styles.code}>src/app/page.js</code>
-        </p>
-        <div>
-          <a
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{" "}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className={styles.vercelLogo}
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
-        </div>
-      </div>
-
-      <div className={styles.center}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
-
-      <div className={styles.grid}>
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Docs <span>-&gt;</span>
-          </h2>
-          <p>Find in-depth information about Next.js features and API.</p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Learn <span>-&gt;</span>
-          </h2>
-          <p>Learn about Next.js in an interactive course with&nbsp;quizzes!</p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Templates <span>-&gt;</span>
-          </h2>
-          <p>Explore starter templates for Next.js.</p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Deploy <span>-&gt;</span>
-          </h2>
-          <p>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
+    <Container>
+      <Content>
+        <LogoArea>
+          <Logo src="logo-responsivo.png" />
+        </LogoArea>
+        <HeadlineArea>
+          <Title>Seja bem vindo<br />
+            ao sistema<br />
+            de protocolos da Unicap!!</Title>
+          <VideoArea />
+        </HeadlineArea>
+        <ButtonArea>
+          {
+            user === 'user1'
+              ?
+              <>
+                <Button onClick={() => router.push('/register')}>
+                  <ButtonTitle>Cadastro</ButtonTitle>
+                  <GoPencil color="white" size={22} />
+                </Button>
+                <Button>
+                  <ButtonTitle>Consulta</ButtonTitle>
+                  <AiOutlineFileSearch color="white" size={24} />
+                </Button>
+              </>
+              :
+              null
+          }
+          {
+            user === 'user3'
+              ?
+              <>
+                <Button>
+                  <ButtonTitle>Consulta</ButtonTitle>
+                  <AiOutlineFileSearch color="white" size={24} />
+                </Button>
+              </>
+              :
+              null
+          }
+          {
+            user === 'user2'
+              ?
+              <>
+                <Button>
+                  <ButtonTitle>Administrador</ButtonTitle>
+                  <GoPerson color="white" size={22} />
+                </Button>
+                <Button>
+                  <ButtonTitle>Cadastro</ButtonTitle>
+                  <GoPencil color="white" size={22} />
+                </Button>
+                <Button>
+                  <ButtonTitle>Consulta</ButtonTitle>
+                  <AiOutlineFileSearch color="white" size={24} />
+                </Button>
+              </>
+              :
+              null
+          }
+        </ButtonArea >
+      </Content >
+    </Container >
   );
 }

@@ -93,7 +93,7 @@ const Register = () => {
                                 </InputGroup>
                                 <InputArea>
                                     <InputTitle>Resumo final</InputTitle>
-                                    <FormInput height={'200px'} width={'700px'} />
+                                    <FormInput /* height={'200px'} */ width={'700px'} />
                                 </InputArea>
                                 <AreaTitle>
                                     <Title>Tramitação</Title>
@@ -110,7 +110,7 @@ const Register = () => {
                                         </InputArea>
                                         <InputArea>
                                             <InputTitle>Anotações</InputTitle>
-                                            <FormInput height={'100px'} />
+                                            <FormInput /* height={'100px'} */ />
                                         </InputArea>
                                     </InputGroup>
                                 </InputGroup>
@@ -171,7 +171,7 @@ const Register = () => {
                                 </InputGroup>
                                 <InputArea>
                                     <InputTitle>Assunto</InputTitle>
-                                    <FormInput height={'200px'} width={'700px'} />
+                                    <FormInput /* height={'200px'} */ width={'700px'} />
                                 </InputArea>
                                 <AreaTitle>
                                     <Title>Tramitação</Title>
@@ -188,7 +188,7 @@ const Register = () => {
                                         </InputArea>
                                         <InputArea>
                                             <InputTitle>Anotações</InputTitle>
-                                            <FormInput height={'100px'} />
+                                            <FormInput /* height={'100px'} */ />
                                         </InputArea>
                                     </InputGroup>
                                 </InputGroup>

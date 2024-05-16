@@ -60,7 +60,7 @@ const Requirement = () => {
                 </InputArea>
                 <InputArea >
                   <InputTitle>Resumo Final</InputTitle>
-                  <FormInput width={'620px'} height={'200px'} />
+                  <FormInput width={'620px'} /* height={'200px'} */ />
                 </InputArea>
                 <AreaTitle>
                   <PageTitle>Histórico de transmição</PageTitle>

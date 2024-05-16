@@ -127,6 +127,10 @@ export const FormInput = styled.input`
     border-radius: 4px;
     color: #000000; 
     word-wrap: break-word;
+    padding-left: 2px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
 `;
 
 export const ButtonGroup = styled.div`

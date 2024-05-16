@@ -12,7 +12,7 @@ const NavBar = () => {
     return (
         <Container>
             <TouchList>
-                <Touch mgB={'171px'} onClick={() => router.push ('/login')}>
+                <Touch mgB={'171px'} onClick={() => router.push ('/')}>
                     <GoHome color='#FFFFFF' size={30} />
                 </Touch>
                 <Touch>

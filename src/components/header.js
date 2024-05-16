@@ -2,7 +2,7 @@
 import { theme } from '../theme'
 import React, { useState } from 'react'
 import { Touch } from '../globalStyles'
-import { GoPerson, GoSearch } from 'react-icons/go'
+import { GoArrowDown, GoPerson, GoSearch } from 'react-icons/go'
 import styled from 'styled-components'
 
 const Header = ({ title, headerKey }) => {
@@ -14,7 +14,10 @@ const Header = ({ title, headerKey }) => {
                 headerKey === 'consult'
                     ?
                     <Consult>
-                        <DropDown />
+                        <DropDown>
+                            <Selected>Todos os departamentos</Selected>
+                            <GoArrowDown size={20} color='black'/>
+                        </DropDown>
                         <ButtonGroup>
                             <Touch>
                                 <GoSearch size={25} color='#000000'/>
@@ -68,6 +71,10 @@ const DropDown = styled.div`
     background-color: ${theme.dakerGray};
     border-radius: 10px;
     cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
 `;
 
 export const ButtonGroup = styled.div`
@@ -76,5 +83,9 @@ export const ButtonGroup = styled.div`
 `;
 
 export const Protocol = styled.p`
-    
+    color: black;
+`;
+
+const Selected = styled.p`
+    color: black;
 `;

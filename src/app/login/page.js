@@ -35,7 +35,7 @@ const Login = () => {
           <Input holder={'****************'} icon={<GoLock color='#000000' size={25} />} />
         </InputGroup>
 
-        <Button title={'Entrar'} press={() => route.push('myProfile')} />
+        <Button title={'Entrar'} press={() => route.push('/')} />
 
         <Link href={'/recoverPassword'}>
           <ForgotPassword>Esqueceu a senha?</ForgotPassword>
