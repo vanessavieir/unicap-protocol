@@ -16,7 +16,7 @@ const Requirement = () => {
   const indexOfLastItem = currentPage * itemsPerPage;
   const indexOfFirstItem = indexOfLastItem - itemsPerPage;
   const currentItems = requirements.slice(indexOfFirstItem, indexOfLastItem);
-  const [isOpen, setIsOpen] = useState(true)
+  const [isOpen, setIsOpen] = useState(false)
   const [selectedRequirement, setSelectedRequirement] = useState()
 
   const paginate = pageNumber => setCurrentPage(pageNumber);

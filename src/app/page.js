@@ -12,7 +12,7 @@ export default function Home() {
 
   const router = useRouter()
   const [isLoged, setIsLoged] = useState(true)
-  const [user, setUser] = useState('user3')
+  const [user, setUser] = useState('user2')
 
   useEffect(() => {
 
@@ -24,7 +24,7 @@ export default function Home() {
 
   return (
     <Container>
-      <Content>
+      <Content img={'background.png'}>
         <LogoArea>
           <Logo src="logo-responsivo.png" />
         </LogoArea>
@@ -55,7 +55,7 @@ export default function Home() {
             user === 'user3'
               ?
               <>
-                <Button>
+                <Button onClick={() => router.push('/requirement')}>
                   <ButtonTitle>Consulta</ButtonTitle>
                   <AiOutlineFileSearch color="white" size={24} />
                 </Button>
@@ -71,11 +71,11 @@ export default function Home() {
                   <ButtonTitle>Administrador</ButtonTitle>
                   <GoPerson color="white" size={22} />
                 </Button>
-                <Button>
+                <Button onClick={() => router.push('/register')}>
                   <ButtonTitle>Cadastro</ButtonTitle>
                   <GoPencil color="white" size={22} />
                 </Button>
-                <Button>
+                <Button onClick={() => router.push('/requirement')}>
                   <ButtonTitle>Consulta</ButtonTitle>
                   <AiOutlineFileSearch color="white" size={24} />
                 </Button>
